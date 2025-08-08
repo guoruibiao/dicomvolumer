@@ -1,0 +1,7 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+# 注意：Tkinter通常是Python标准库的一部分，不需要通过pip安装
+# 在macOS上，如果遇到Tkinter相关错误，请确保已安装Python的Tk支持
+# 可以通过以下命令安装(如果使用homebrew):
+# brew install python-tk

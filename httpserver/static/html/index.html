@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学影像体积计算系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>医学影像体积计算工具</h1>
+        
+        <form id="folder-form" class="folder-form">
+            <div class="form-group full-width">
+                <label for="folder-path">文件夹路径:</label>
+                <input type="text" id="folder-path" name="folder-path" placeholder="输入文件夹路径" class="full-width-input">
+            </div>
+            
+            <div class="form-group">
+                <label for="roi-file">ROI文件名:</label>
+                <input type="text" id="roi-file" name="roi-file" placeholder="输入ROI文件名">
+                <button type="submit" class="btn submit-btn">开始遍历</button>
+            </div>
+
+            <div class="roi-info-box">
+                <p>1. roi文件需要放置到dicom文件的上一级，比如dicom文件的完整路径是：/xxx/yyy/zzz/dicom/I7900000 则roi文件需要放到: /xxx/yyy/zzz/dicom/roi.nii.gz</p>
+                <p>2. 本处表单项无需填写每一个roi的全路径，系统默认使用文件名去计算完整路径</p>
+                <p>3. 更换目录时请重启本服务器，以避免多个项目的数据耦合</p>
+            </div>
+        </form>
+        
+        <div class="status-message success" id="success-message">
+            操作成功！
+        </div>
+        
+        <div class="status-message error" id="error-message">
+            操作失败！
+        </div>
+        
+        <div class="loader" id="loader"></div>
+        
+        <div class="table-container">
+            <div class="table-header">
+                <h2>DICOM目录列表</h2>
+                <button id="export-btn" class="btn export-btn">导出记录</button>
+            </div>
+            <table id="dicom-table">
+                <thead>
+                    <tr>
+                        <th>状态</th>
+                        <th>子文件夹全路径</th>
+                        <th>ROI文件名</th>
+                        <th>操作</th>
+                        <th>计算结果(单位:mm³)</th>
+                    </tr>
+                </thead>
+                <tbody id="dicom-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>医学影像体积计算系统 &copy; 2025</p>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
