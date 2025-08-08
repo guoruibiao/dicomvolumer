@@ -66,14 +66,21 @@ python start_server.py
 ## 目录结构
 ```
 volumer/
-├── main.py              # 主程序入口
+├── main.py              # 主程序入口，包含GUI界面实现
 ├── start_server.py      # Web服务启动脚本
-├── requirements.txt     # 依赖包列表
-├── package_app.py       # 打包脚本
+├── requirements.txt     # 项目依赖包列表
+├── package_app.py       # 跨平台打包脚本
 ├── icon.png             # 应用图标
+├── .gitignore           # Git忽略文件
 ├── httpserver/          # Web服务相关代码
-│   ├── api/             # API路由
-│   └── static/          # 静态文件
-├── utils/               # 工具类
+│   ├── api/
+│   │   └── routes.py    # API路由定义
+│   └── static/
+│       ├── css/         # 样式文件
+│       ├── html/        # HTML页面
+│       └── js/          # JavaScript代码
+├── utils/
+│   ├── filehelper.py    # 文件处理工具
+│   └── volumer.py       # 体积计算核心逻辑
 └── log/                 # 日志文件
 ```
