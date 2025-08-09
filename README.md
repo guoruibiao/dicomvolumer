@@ -26,15 +26,34 @@ python start_server.py
 ```
 
 ## 打包应用
-本项目提供了一个跨平台的打包脚本，可以将应用打包为单个可执行文件。
+本项目提供了多种打包方式，以适应不同平台的需求。
 
-### 使用方法
+### 跨平台打包脚本 (PyInstaller)
+本项目提供了一个基于PyInstaller的跨平台打包脚本，可以将应用打包为单个可执行文件。
+
+#### 使用方法
 1. 在项目根目录下运行打包脚本：
    ```bash
    python package_app.py
    ```
 
 2. 打包完成后，可执行文件将位于`dist`目录下。
+
+### Windows平台打包 (py2exe)
+对于Windows平台，我们提供了一个基于py2exe的专用打包脚本。
+
+#### 使用方法
+1. 安装py2exe：
+   ```bash
+   pip install py2exe
+   ```
+
+2. 在项目根目录下运行打包脚本：
+   ```bash
+   python setup_py2exe.py py2exe
+   ```
+
+3. 打包完成后，可执行文件将位于`dist_windows`目录下。
 
 ### 跨平台注意事项
 #### Windows
