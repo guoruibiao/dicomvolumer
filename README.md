@@ -89,6 +89,7 @@ volumer/
 ├── start_server.py      # Web服务启动脚本
 ├── requirements.txt     # 项目依赖包列表
 ├── package_app.py       # 跨平台打包脚本
+├── setup_py2exe.py      # Windows平台打包脚本
 ├── icon.png             # 应用图标
 ├── .gitignore           # Git忽略文件
 ├── httpserver/          # Web服务相关代码

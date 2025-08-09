@@ -44,6 +44,8 @@ def stop_server():
 def create_gui():
     global server_thread
     root = tk.Tk()
+    # 设置窗口保持在最前台
+    root.attributes('-topmost', True)
     # 设置窗口图标
     try:
         icon = tk.PhotoImage(file="icon.png")
@@ -52,6 +54,8 @@ def create_gui():
         print(f"设置图标失败: {str(e)}")
     root.title("医学影像体积计算")
     root.geometry("300x150")
+    # 设置窗口不可调整大小
+    root.resizable(False, False)
     
     # 创建启动/停止服务器的按钮
     def toggle_server():
@@ -83,7 +87,7 @@ def create_gui():
     # 检查服务器状态
     def check_server_status():
         if server_running:
-            status_label.config(text="服务器运行中", fg="green")
+            status_label.config(text="服务器运行中...", fg="green")
         else:
             status_label.config(text="服务器启动失败", fg="red")
     

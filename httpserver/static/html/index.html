@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>医学影像体积计算系统</title>
+    <title>DICOM影像体积计算系统</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>医学影像体积计算工具</h1>
+        <h1>DICOM影像掩膜体积计算工具</h1>
         
         <form id="folder-form" class="folder-form">
             <div class="form-group full-width">
@@ -23,7 +23,7 @@
             </div>
 
             <div class="roi-info-box">
-                <p>1. roi文件需要放置到dicom文件的上一级，比如dicom文件的完整路径是：/xxx/yyy/zzz/dicom/I7900000 则roi文件需要放到: /xxx/yyy/zzz/dicom/roi.nii.gz</p>
+                <p>1. roi文件需要放置到dicom文件的上一级，如dicom文件的路径是：/xxx/yyy/zzz/dicom/I7900000 则roi需放至: /xxx/yyy/zzz/dicom/roi.nii.gz</p>
                 <p>2. 本处表单项无需填写每一个roi的全路径，系统默认使用文件名去计算完整路径</p>
                 <p>3. 更换目录时请重启本服务器，以避免多个项目的数据耦合</p>
             </div>
