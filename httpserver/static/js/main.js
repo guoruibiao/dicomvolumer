@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         successMessage.style.display = 'block';
         setTimeout(() => {
             successMessage.style.display = 'none';
-        }, 6000);
+        }, 9000);
     }
 
     // 显示错误消息
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errorMessage.style.display = 'block';
         setTimeout(() => {
             errorMessage.style.display = 'none';
-        }, 6000);
+        }, 9000);
     }
 
     // 遍历文件夹并获取DICOM目录
