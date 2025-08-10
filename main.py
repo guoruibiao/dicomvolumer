@@ -53,7 +53,7 @@ def create_gui():
     except Exception as e:
         print(f"设置图标失败: {str(e)}")
     root.title("医学影像体积计算")
-    root.geometry("300x150")
+    root.geometry("300x160")
     # 设置窗口不可调整大小
     root.resizable(False, False)
     
@@ -95,7 +95,7 @@ def create_gui():
     start_button.pack(pady=30)
     
     # 添加说明标签
-    label = tk.Label(root, text="点击按钮启动/关闭Web服务器")
+    label = tk.Label(root, text="点击按钮启动/关闭Web服务器，也可手动访问：\nhttp://localhost:8000/static/html/index.html")
     label.pack()
     
     # 添加状态标签
